@@ -1,5 +1,4 @@
 var models = require('../models');
-var app = require('express');
 
 module.exports = {
   get: function (req, res) {
@@ -13,8 +12,7 @@ module.exports = {
       // Else send JSON-ified results
       } else {
         res.send(results);
-        // res.send(200).json(result);
-        // res.json(result);
+
       }
     });
 
@@ -26,7 +24,6 @@ module.exports = {
     // Check req.body and ensure queries work
     models.messages.create(req.body, (err, results) => {
       if (err) {
-        //console.log(err);
         res.sendStatus(500);
       } else {
         res.send(201);
