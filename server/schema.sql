@@ -43,10 +43,10 @@ CREATE TABLE messages (
 
 /* Create other tables an d define schemas for them here! */
 /* INSERT INTO table_name VALUES (value_1, value_2,....); */
-INSERT INTO users(name) VALUES ('Amy');
-INSERT INTO friends(name) VALUES ('Minggui');
-INSERT INTO rooms(name) VALUES ('Sheps');
-INSERT INTO messages(text, userID, friendID, roomID) VALUES ('Come visit me :)', 1, 1, 1);
+-- INSERT INTO users(name) VALUES ('Amy');
+-- INSERT INTO friends(name) VALUES ('Minggui');
+-- INSERT INTO rooms(name) VALUES ('Sheps');
+-- INSERT INTO messages(text, userID, friendID, roomID) VALUES ('Come visit me :)', 1, 1, 1);
 
 /*  Execute this file from the command line by typing:
  *    mysql -u root < server/schema.sql
