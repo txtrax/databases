@@ -14,11 +14,13 @@ module.exports = {
 
 
   create: function (messageData, callback) {
-    const { text, userID, friendID, roomID } = messageData;
-    console.log('Made it here:', `INSERT INTO messages(text, userID, friendID, roomID) VALUES ("${text}",${userID},${friendID},${roomID})`);
+    // const { text, userID, friendID, roomID } = messageData;
+    const {username, message, roomname} = messageData;
+    // console.log('Made it here:', `INSERT INTO messages(text, userID, friendID, roomID) VALUES ("${text}",${userID},${friendID},${roomID})`);
 
     // Uses 'INSERT INTO table VALUES (xyz)' database command
-    db.dbConnection.query(`INSERT INTO messages(text, userID, friendID, roomID) VALUES ("${text}",${userID},${friendID},${roomID})`, (err, results) => {
+    // db.dbConnection.query(`INSERT INTO messages(text, userID, friendID, roomID) VALUES ("${text}",${userID},${friendID},${roomID})`, (err, results) => {
+    db.dbConnection.query(`INSERT INTO messages(username, message, roomname) VALUES ("${username}","${message}","${roomname}")`, (err, results) => {
       console.log(err);
       callback(err, results);
     });
