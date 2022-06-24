@@ -13,9 +13,9 @@ const dbConnection = mysql.createConnection({
   // host: 'localhost',
   user: 'root',
   database: 'chat',
-  password: 'sunmoonstars'
+  password: ''
 });
 
 //queries
 
-module.exports.cdbConnection = dbConnection;
+module.exports.dbConnection = dbConnection;
